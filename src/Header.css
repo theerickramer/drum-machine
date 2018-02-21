@@ -1,0 +1,22 @@
+.name {
+  grid-area: name; }
+
+.controls {
+  grid-area: controls;
+  display: flex;
+  justify-content: flex-end;
+  align-self: center; }
+  .controls > * {
+    display: inline-block; }
+
+.space {
+  background: yellow; }
+
+.step-headers,
+.space {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black; }
+
+.step-headers {
+  grid-area: step-headers;
+  background: orange; }

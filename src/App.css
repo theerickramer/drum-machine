@@ -6,19 +6,7 @@ body,
 
 .drum-machine {
   display: grid;
-  grid-template: 'name controls' 2fr '. stepColumnHeaders' 1fr 'instruments steps' 7fr / 1fr 4fr; }
-  .drum-machine .name {
-    grid-area: name; }
-  .drum-machine .controls {
-    grid-area: controls;
-    display: flex;
-    justify-content: flex-end;
-    align-self: center; }
-    .drum-machine .controls > * {
-      display: inline-block; }
-  .drum-machine .step-column-headers {
-    grid-area: stepColumnHeaders;
-    background: orange; }
+  grid-template: 'name controls' 2fr 'space step-headers' 1fr 'instruments steps' 7fr / 1fr 4fr; }
   .drum-machine .instruments {
     grid-area: instruments;
     background: purple; }
