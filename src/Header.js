@@ -3,14 +3,17 @@ import './Header.css';
 
 export default class Header extends Component {
   render() {
-    return (
-      <Fragment>
+    return <Fragment>
         <div className="name">
           <h1>808</h1>
         </div>
         <div className="controls">
-          <button className="button--stop" />
-          <button className="button--play" />
+          <button className="button button--stop">
+            <div className="icon icon--stop" />
+          </button>
+          <button className="button button--play">
+            <div className="icon icon--play" />
+          </button>
           <div className="bpm">
             <input className="bpm__input" value="128" id="bpm" />
             <label className="bpm__label" htmlFor="bpm">
@@ -18,14 +21,13 @@ export default class Header extends Component {
             </label>
           </div>
           <select className="sequence">
-            <option>Sequence 1</option>
-            <option>Sequence 2</option>
-            <option>Sequence 3</option>
+            <option>SEQUENCE 1</option>
+            <option>SEQUENCE 2</option>
+            <option>SEQUENCE 3</option>
           </select>
         </div>
         <div className="space" />
         <div className="step-headers" />
-      </Fragment>
-    );
+      </Fragment>;
   }
 }
