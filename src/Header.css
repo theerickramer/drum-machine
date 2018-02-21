@@ -12,6 +12,8 @@
   padding: 20px; }
   .controls > * {
     display: inline-block; }
+  .controls .bpm__label {
+    margin: 0 32px 0 12px; }
 
 .space {
   background: yellow; }
