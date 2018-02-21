@@ -1,5 +1,8 @@
 .name {
   grid-area: name;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .controls {
@@ -7,6 +10,7 @@
   display: flex;
   justify-content: flex-end;
   align-self: center;
+  padding: 20px;
 
   & > * {
     display: inline-block;

@@ -1,11 +1,15 @@
 .name {
-  grid-area: name; }
+  grid-area: name;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .controls {
   grid-area: controls;
   display: flex;
   justify-content: flex-end;
-  align-self: center; }
+  align-self: center;
+  padding: 20px; }
   .controls > * {
     display: inline-block; }
 

@@ -7,12 +7,12 @@ body,
 
 .drum-machine {
   display: grid;
+  padding: 0 25px;
   grid-template:
     'name controls' 2fr
     'space step-headers' 1fr
     'instruments steps' 7fr
     / 1fr 4fr;
-
   .instruments {
     grid-area: instruments;
     background: purple;
