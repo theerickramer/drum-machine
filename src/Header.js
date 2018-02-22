@@ -23,7 +23,7 @@ export default class Header extends Component {
             <div className="icon icon--play" />
           </button>
           <div className="bpm">
-            <input className="bpm__input" value="128" id="bpm" />
+            <input className="bpm__input" value={this.props.bpm} id="bpm" />
             <label className="bpm__label" htmlFor="bpm">
               BPM
             </label>
