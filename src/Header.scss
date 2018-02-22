@@ -27,6 +27,7 @@
     padding: 0 10px;
     height: 45px;
     border: 1px solid black;
+    font-size: 22px;
     font-weight: bold;
   }
 
@@ -45,25 +46,40 @@
       border-bottom: 13px solid white;
       border-left: 22px solid black;
     }
+
+    &--disclosure {
+      width: 0;
+      height: 0;
+      border-top: 15px solid black;
+      border-left: 12px solid white;
+      border-right: 12px solid white;
+    }
   }
 
   .bpm {
     &__input {
-      max-width: 25px;
+      max-width: 43px;
       max-height: 43px;
     }
 
     &__label {
       margin: 0 32px 0 12px;
+      font-size: 22px;
       font-weight: bold;
     }
   }
 
   .sequence {
     -webkit-appearance: none;
-    height: 45px;
     border-radius: 0;
     background: none;
+
+    &-label {
+      padding: 12px;
+      height: 19px;
+      border: 1px solid black;
+      border-left: none;
+    }
   }
 }
 

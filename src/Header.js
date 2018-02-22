@@ -20,11 +20,14 @@ export default class Header extends Component {
               BPM
             </label>
           </div>
-          <select className="sequence">
+          <select className="sequence" id="sequence">
             <option>SEQUENCE 1</option>
             <option>SEQUENCE 2</option>
             <option>SEQUENCE 3</option>
           </select>
+          <label className="sequence-label" htmlFor="sequence">
+            <div className="icon icon--disclosure" />
+          </label>
         </div>
         <div className="space" />
         <div className="step-headers" />
