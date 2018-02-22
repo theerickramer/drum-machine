@@ -13,15 +13,17 @@ class App extends Component {
     ]
   };
   render() {
-    return (
-      <div className="drum-machine">
+    return <div className="drum-machine">
         <Header steps={this.state.steps} />
         <ul className="instruments">
-          {this.state.instruments.map(instrument => <li className="instrument"><h4 className="instrument__name">{instrument.name}</h4></li>)}
+          {this.state.instruments.map((instrument, index) => (
+            <li className="instrument" key={index}>
+              <h4 className="instrument__name">{instrument.name}</h4>
+            </li>
+          ))}
         </ul>
         <div className="steps" />
-      </div>
-    );
+      </div>;
   }
 }
 
