@@ -24,7 +24,8 @@ ul {
     grid-area: instruments;
     background: purple;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
     padding: 20px 25px;
   }
 
