@@ -3,12 +3,20 @@ import Header from './Header';
 import './App.css';
 
 class App extends Component {
+  state = {
+    steps: 16,
+    instruments: [
+      { name: 'kick', steps: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }
+    ]
+  };
   render() {
     return (
       <div className="drum-machine">
-        <Header />
-        <div className="instruments"></div>
-        <div className="steps"></div>
+        <Header steps={this.state.steps} />
+        <ul className="instruments">
+          {this.state.instruments.map(instrument => <li>{instrument.name}</li>)}
+        </ul>
+        <div className="steps" />
       </div>
     );
   }

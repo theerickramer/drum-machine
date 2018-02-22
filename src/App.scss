@@ -5,6 +5,12 @@ body,
   height: 100%;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .drum-machine {
   display: grid;
   padding: 0 25px;
@@ -13,9 +19,13 @@ body,
     'space step-headers' 1fr
     'instruments steps' 7fr
     / 1fr 4fr;
+
   .instruments {
     grid-area: instruments;
     background: purple;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 25px;
   }
 
   .steps {

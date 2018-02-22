@@ -2,8 +2,16 @@ import React, { Component, Fragment } from 'react';
 import './Header.css';
 
 export default class Header extends Component {
+  steps() {
+    let steps = [];
+    for (let i = 1; i <= this.props.steps; i++) {
+      steps.push(<li>{i}</li>);
+    }
+    return steps;
+  }
   render() {
-    return <Fragment>
+    return (
+      <Fragment>
         <div className="name">
           <h1>808</h1>
         </div>
@@ -30,7 +38,8 @@ export default class Header extends Component {
           </label>
         </div>
         <div className="space" />
-        <div className="step-headers" />
-      </Fragment>;
+        <ul className="step-headers">{this.steps()}</ul>
+      </Fragment>
+    );
   }
 }
