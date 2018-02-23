@@ -1,15 +1,10 @@
 import React, { Component, Fragment } from 'react';
+import StepHeaders from './StepHeaders';
 import './Header.css';
 
 export default class Header extends Component {
-  steps() {
-    let steps = [];
-    for (let i = 1; i <= this.props.steps; i++) {
-      steps.push(<li key={i}>{i}</li>);
-    }
-    return steps;
-  }
   render() {
+    const { bpm, steps } = this.props;
     return (
       <Fragment>
         <div className="name">
@@ -23,7 +18,7 @@ export default class Header extends Component {
             <div className="icon icon--play" />
           </button>
           <div className="bpm">
-            <input className="bpm__input" value={this.props.bpm} id="bpm" />
+            <input className="bpm__input" value={bpm} id="bpm" />
             <label className="bpm__label" htmlFor="bpm">
               BPM
             </label>
@@ -38,7 +33,7 @@ export default class Header extends Component {
           </label>
         </div>
         <div className="space" />
-        <ul className="step-headers">{this.steps()}</ul>
+        <StepHeaders steps={steps}/>
       </Fragment>
     );
   }
