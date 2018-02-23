@@ -56,18 +56,3 @@
       height: 19px;
       border: 1px solid black;
       border-left: none; }
-
-.space {
-  background: yellow; }
-
-.step-headers,
-.space {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black; }
-
-.step-headers {
-  grid-area: step-headers;
-  background: orange;
-  display: inline-flex;
-  justify-content: space-around;
-  align-items: center; }

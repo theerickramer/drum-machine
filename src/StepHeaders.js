@@ -1,10 +1,11 @@
 import React, { Component, Fragment } from 'react';
+import './StepHeaders.css';
 
 export default class Header extends Component {
   steps() {
     let steps = [];
     for (let i = 1; i <= this.props.steps; i++) {
-      steps.push(<li key={i}>{i}</li>);
+      steps.push(<li className="step-header" key={i}>{i}</li>);
     }
     return steps;
   }

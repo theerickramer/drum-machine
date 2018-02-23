@@ -1,0 +1,21 @@
+.space {
+  background: yellow;
+}
+
+.step-headers,
+.space {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.step-headers {
+  display: grid;
+  grid-area: step-headers;
+  grid-template-columns: repeat(16, 1fr);
+  justify-items: center;
+  background: orange;
+}
+.step-headers .step-header {
+  display: flex;
+  align-items: center;
+}
