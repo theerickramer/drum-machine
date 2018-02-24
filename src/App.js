@@ -26,8 +26,7 @@ class App extends Component {
     return 60 / this.state.bpm * 4 / this.state.steps * 1000;
   }
   render() {
-    return (
-      <div className="drum-machine">
+    return <div className="drum-machine">
         <Header bpm={this.state.bpm} steps={this.state.steps} />
         <ul className="instruments">
           {this.state.instruments.map((instrument, index) => (
@@ -36,9 +35,68 @@ class App extends Component {
             </li>
           ))}
         </ul>
-        <div className="steps" />
-      </div>
-    );
+        <ul className="steps">
+          <li className="steps__row-container">
+            <ul className="steps__row">
+              <li className="step-container">
+                <div className="step active" />
+              </li>
+              <li className="step-container">
+                <div className="step" />
+              </li>
+              <li className="step-container">
+                <div className="step" />
+              </li>
+              <li className="step-container">
+                <div className="step" />
+              </li>
+              <li className="step-container">
+                <div className="step" />
+              </li>
+              <li className="step-container">
+                <div className="step" />
+              </li>
+              <li className="step-container">
+                <div className="step" />
+              </li>
+              <li className="step-container">
+                <div className="step" />
+              </li>
+              <li className="step-container">
+                <div className="step" />
+              </li>
+              <li className="step-container">
+                <div className="step" />
+              </li>
+              <li className="step-container">
+                <div className="step" />
+              </li>
+              <li className="step-container">
+                <div className="step" />
+              </li>
+              <li className="step-container">
+                <div className="step" />
+              </li>
+              <li className="step-container">
+                <div className="step" />
+              </li>
+              <li className="step-container">
+                <div className="step" />
+              </li>
+              <li className="step-container">
+                <div className="step" />
+              </li>
+            </ul>
+          </li>
+          <li className="steps__row-container">
+            <ul className="steps__row">
+              <li className="step-container">
+                <div className="step" />
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>;
   }
 }
 
