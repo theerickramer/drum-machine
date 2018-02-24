@@ -39,7 +39,7 @@ class App extends Component {
           <li className="steps__row-container">
             <ul className="steps__row">
               <li className="step-container">
-                <div className="step active" />
+                <div className="step"><div className="step__marker"></div></div>
               </li>
               <li className="step-container">
                 <div className="step" />
