@@ -6,6 +6,7 @@ import './App.css';
 class App extends Component {
   state = {
     bpm: 128,
+    current: 1,
     instruments: [
       { name: 'kick', steps: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
       {
@@ -37,7 +38,7 @@ class App extends Component {
             </li>
           ))}
         </ul>
-       <Steps instruments={this.state.instruments}/>
+       <Steps current={this.state.current} instruments={this.state.instruments}/>
       </div>
     );
   }
