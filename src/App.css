@@ -15,3 +15,60 @@ ul {
   padding: 0 25px;
   max-width: 1200px;
   grid-template: 'name controls' 2fr 'space step-headers' 1fr 'instruments steps' 7fr / 1fr 4fr; }
+  .drum-machine .name {
+    grid-area: name;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .drum-machine .controls {
+    grid-area: controls;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px; }
+    .drum-machine .controls > * {
+      display: inline-block;
+      align-self: center; }
+    .drum-machine .controls .button {
+      margin-right: 2px;
+      width: 45px; }
+    .drum-machine .controls .button,
+    .drum-machine .controls .bpm__input,
+    .drum-machine .controls .sequence {
+      padding: 0 10px;
+      height: 45px;
+      border: 1px solid black;
+      font-size: 22px;
+      font-weight: bold; }
+    .drum-machine .controls .icon {
+      background: black; }
+      .drum-machine .controls .icon--stop {
+        width: 22px;
+        height: 22px; }
+      .drum-machine .controls .icon--play {
+        width: 0;
+        height: 0;
+        border-top: 13px solid white;
+        border-bottom: 13px solid white;
+        border-left: 22px solid black; }
+      .drum-machine .controls .icon--disclosure {
+        width: 0;
+        height: 0;
+        border-top: 15px solid black;
+        border-left: 12px solid white;
+        border-right: 12px solid white; }
+    .drum-machine .controls .bpm__input {
+      max-width: 43px;
+      max-height: 43px; }
+    .drum-machine .controls .bpm__label {
+      margin: 0 32px 0 12px;
+      font-size: 22px;
+      font-weight: bold; }
+    .drum-machine .controls .sequence {
+      -webkit-appearance: none;
+      border-radius: 0;
+      background: none; }
+      .drum-machine .controls .sequence-label {
+        padding: 12px;
+        height: 19px;
+        border: 1px solid black;
+        border-left: none; }

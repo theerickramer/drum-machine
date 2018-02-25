@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from './Header';
+import StepHeaders from './StepHeaders';
 import Instruments from './Instruments';
 import Steps from './Steps';
 import './App.css';
@@ -28,17 +28,40 @@ class App extends Component {
   calculateInterval(bpm) {
     return 60 / this.state.bpm * 4 / this.state.steps * 1000;
   }
+
   render() {
-    return (
-      <div className="drum-machine">
-        <Header bpm={this.state.bpm} steps={this.state.steps} />
-        <Instruments instruments={this.state.instruments} />
-        <Steps
-          current={this.state.current}
-          instruments={this.state.instruments}
-        />
-      </div>
-    );
+    const {bpm, current, instruments, steps} = this.state;
+    return <div className="drum-machine">
+        <div className="name">
+          <h1>808</h1>
+        </div>
+        <div className="controls">
+          <button className="button button--stop">
+            <div className="icon icon--stop" />
+          </button>
+          <button className="button button--play">
+            <div className="icon icon--play" />
+          </button>
+          <div className="bpm">
+            <input className="bpm__input" value={bpm} id="bpm" />
+            <label className="bpm__label" htmlFor="bpm">
+              BPM
+            </label>
+          </div>
+          <select className="sequence" id="sequence">
+            <option>SEQUENCE 1</option>
+            <option>SEQUENCE 2</option>
+            <option>SEQUENCE 3</option>
+          </select>
+          <label className="sequence-label" htmlFor="sequence">
+            <div className="icon icon--disclosure" />
+          </label>
+        </div>
+        <div className="space" />
+        <StepHeaders steps={steps} />
+        <Instruments instruments={instruments} />
+        <Steps current={current} instruments={instruments} />
+      </div>;
   }
 }
 
