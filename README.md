@@ -20,3 +20,9 @@ Launches the test runner in the interactive watch mode.<br>
 
 Testing suite is Jest + Enzyme.
 
+## Todo
+Add sound via `<audio>`, eventually Web Audio API<br>
+Add velocity<br>
+Adjustable number of overall steps<br>
+Adjustable number of steps for each instrument<br>
+Sound chooser
