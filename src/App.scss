@@ -3,6 +3,8 @@ body,
 #root,
 .drum-machine {
   height: 100%;
+  background: black;
+  color: hotpink;
 }
 
 ul {
@@ -43,6 +45,7 @@ ul {
     .button {
       margin-right: 2px;
       width: 45px;
+      background: black;
     }
 
     .button,
@@ -50,13 +53,13 @@ ul {
     .sequence {
       padding: 0 10px;
       height: 45px;
-      border: 1px solid black;
+      border: 1px solid hotpink;
       font-size: 22px;
       font-weight: bold;
     }
 
     .icon {
-      background: black;
+      background: hotpink;
 
       &--stop {
         width: 22px;
@@ -66,17 +69,17 @@ ul {
       &--play {
         width: 0;
         height: 0;
-        border-top: 13px solid white;
-        border-bottom: 13px solid white;
-        border-left: 22px solid black;
+        border-top: 13px solid black;
+        border-bottom: 13px solid black;
+        border-left: 22px solid hotpink;
       }
 
       &--disclosure {
         width: 0;
         height: 0;
-        border-top: 15px solid black;
-        border-left: 12px solid white;
-        border-right: 12px solid white;
+        border-top: 15px solid hotpink;
+        border-left: 12px solid black;
+        border-right: 12px solid black;
       }
     }
 
@@ -84,6 +87,8 @@ ul {
       &__input {
         max-width: 43px;
         max-height: 43px;
+        background: black;
+        color: hotpink;
       }
 
       &__label {
@@ -97,11 +102,12 @@ ul {
       -webkit-appearance: none;
       border-radius: 0;
       background: none;
+      color: hotpink;
 
       &-label {
         padding: 12px;
         height: 19px;
-        border: 1px solid black;
+        border: 1px solid hotpink;
         border-left: none;
       }
     }

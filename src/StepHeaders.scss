@@ -1,11 +1,7 @@
-.space {
-  background: yellow;
-}
-
 .step-headers,
 .space {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid hotpink;
+  border-bottom: 1px solid hotpink;
 }
 
 .step-headers {
@@ -13,7 +9,7 @@
   grid-area: step-headers;
   grid-template-columns: repeat(16, 1fr);
   justify-items: center;
-  background: orange;
+  font-weight: bold;
 
   .step-header {
     display: flex;

@@ -20,14 +20,14 @@ class App extends Component {
     return 60 / this.state.bpm * 4 / this.state.steps * 1000;
   }
   setBpm(bpm) {
-    this.setState({bpm}, () => this.restart())
+    this.setState({ bpm }, () => this.restart());
   }
   setSequence(seq) {
-    this.setState({instruments: sequences[seq]})
+    this.setState({ instruments: sequences[seq] });
   }
   restart() {
-    this.stop()
-    this.start()
+    this.stop();
+    this.start();
   }
   start() {
     const interval = setInterval(
@@ -42,7 +42,8 @@ class App extends Component {
   }
   render() {
     const { bpm, current, instruments, steps } = this.state;
-    return <div className="drum-machine">
+    return (
+      <div className="drum-machine">
         <div className="name">
           <h1>808</h1>
         </div>
@@ -54,12 +55,22 @@ class App extends Component {
             <div className="icon icon--play" />
           </button>
           <div className="bpm">
-            <input className="bpm__input" defaultValue={bpm} id="bpm" onChange={e => this.setBpm(e.target.value)} />
+            <input
+              className="bpm__input"
+              defaultValue={bpm}
+              id="bpm"
+              onChange={e => this.setBpm(e.target.value)}
+            />
             <label className="bpm__label" htmlFor="bpm">
               BPM
             </label>
           </div>
-          <select className="sequence" id="sequence" onChange={e => this.setSequence(e.target.value)}>
+          <select
+            className="sequence"
+            id="sequence"
+            onChange={e => this.setSequence(e.target.value)}
+            ref="sequence"
+          >
             <option default>SEQUENCE 1</option>
             <option>SEQUENCE 2</option>
             <option>SEQUENCE 3</option>
@@ -72,7 +83,8 @@ class App extends Component {
         <StepHeaders steps={steps} />
         <Instruments instruments={instruments} />
         <Steps current={current} instruments={instruments} />
-      </div>;
+      </div>
+    );
   }
 }
 
