@@ -7,7 +7,7 @@ class Steps extends Component {
     return steps.map((step, index) => {
       return (
         <li className="step-container" key={index}>
-          <div className={current - 1 === index ? 'step active' : 'step'}>
+          <div className={current - 1  === index ? 'step active' : 'step'}>
             {step === 1 ? <div className="step__marker" /> : null}
           </div>
         </li>
