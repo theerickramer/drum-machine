@@ -3,26 +3,13 @@ import StepHeaders from './StepHeaders';
 import Instruments from './Instruments';
 import Steps from './Steps';
 import './App.css';
+import sequences from './sequences';
 
 class App extends Component {
   state = {
     bpm: 128,
     current: 0,
-    instruments: [
-      { name: 'kick', steps: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-      {
-        name: 'snare',
-        steps: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-      },
-      {
-        name: 'open hat',
-        steps: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-      },
-      {
-        name: 'closed hat',
-        steps: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-      }
-    ],
+    instruments: sequences['SEQUENCE 1'],
     steps: 16
   };
   advance() {
@@ -34,6 +21,9 @@ class App extends Component {
   }
   setBpm(bpm) {
     this.setState({bpm}, () => this.restart())
+  }
+  setSequence(seq) {
+    this.setState({instruments: sequences[seq]})
   }
   restart() {
     this.stop()
@@ -52,8 +42,7 @@ class App extends Component {
   }
   render() {
     const { bpm, current, instruments, steps } = this.state;
-    return (
-      <div className="drum-machine">
+    return <div className="drum-machine">
         <div className="name">
           <h1>808</h1>
         </div>
@@ -65,13 +54,13 @@ class App extends Component {
             <div className="icon icon--play" />
           </button>
           <div className="bpm">
-            <input className="bpm__input" defaultValue={bpm} id="bpm" onChange={(e) => this.setBpm(e.target.value)} />
+            <input className="bpm__input" defaultValue={bpm} id="bpm" onChange={e => this.setBpm(e.target.value)} />
             <label className="bpm__label" htmlFor="bpm">
               BPM
             </label>
           </div>
-          <select className="sequence" id="sequence">
-            <option>SEQUENCE 1</option>
+          <select className="sequence" id="sequence" onChange={e => this.setSequence(e.target.value)}>
+            <option default>SEQUENCE 1</option>
             <option>SEQUENCE 2</option>
             <option>SEQUENCE 3</option>
           </select>
@@ -83,8 +72,7 @@ class App extends Component {
         <StepHeaders steps={steps} />
         <Instruments instruments={instruments} />
         <Steps current={current} instruments={instruments} />
-      </div>
-    );
+      </div>;
   }
 }
 
