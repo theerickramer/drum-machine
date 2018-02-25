@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import Instruments from './Instruments';
 import Steps from './Steps';
 import './App.css';
 
@@ -31,14 +32,11 @@ class App extends Component {
     return (
       <div className="drum-machine">
         <Header bpm={this.state.bpm} steps={this.state.steps} />
-        <ul className="instruments">
-          {this.state.instruments.map((instrument, index) => (
-            <li className="instrument" key={index}>
-              <h4 className="instrument__name">{instrument.name}</h4>
-            </li>
-          ))}
-        </ul>
-       <Steps current={this.state.current} instruments={this.state.instruments}/>
+        <Instruments instruments={this.state.instruments} />
+        <Steps
+          current={this.state.current}
+          instruments={this.state.instruments}
+        />
       </div>
     );
   }
