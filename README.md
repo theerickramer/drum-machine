@@ -22,11 +22,13 @@ Testing suite is Jest + Enzyme.
 
 ## Todo
 Add sound<br>
+Add effects (Web Audio API)<br>
+Save user sequences<br>
+Move bpm to sequence state<br>
 Active step marker pulse animation<br>
 Add velocity<br>
 Adjustable number of overall steps<br>
 Adjustable number of steps for each instrument<br>
 Sound chooser<br>
-Web Audio API FX<br>
 Electron App<br>
 React Native App<br>
