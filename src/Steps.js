@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
+import Step from './Step.js';
 import './Steps.css';
 
 class Steps extends Component {
-  renderSteps(steps) {
+  renderSteps(instrument) {
     const { current } = this.props;
-    return steps.map((step, index) => {
-      return (
-        <li className="step-container" key={index}>
-          <div className={current - 1  === index ? 'step active' : 'step'}>
-            {step === 1 ? <div className="step__marker" /> : null}
+    return instrument.steps.map((step, index) => {
+      return <li className="step-container" key={index}>
+          <div className={current - 1 === index ? 'step active' : 'step'}>
+            <Step current={current} step={step} instrument={instrument} />
           </div>
-        </li>
-      );
+        </li>;
     });
   }
 
@@ -20,7 +19,7 @@ class Steps extends Component {
     const stepRows = instruments.map((instrument, index) => {
       return (
         <li className="steps__row-container" key={index}>
-          <ul className="steps__row">{this.renderSteps(instrument.steps)}</ul>
+          <ul className="steps__row">{this.renderSteps(instrument)}</ul>
         </li>
       );
     });
