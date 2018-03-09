@@ -7,7 +7,7 @@ import sequences from './sequences';
 
 class App extends Component {
   state = {
-    bpm: 128,
+    bpm: 76,
     current: 0,
     instruments: sequences['SEQUENCE 1'],
     steps: 16
@@ -45,7 +45,7 @@ class App extends Component {
     return (
       <div className="drum-machine">
         <div className="name">
-          <h1>808</h1>
+          <h1>Redrum</h1>
         </div>
         <div className="controls">
           <button className="button button--stop" onClick={() => this.stop()}>
